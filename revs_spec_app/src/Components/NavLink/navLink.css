@@ -1,0 +1,12 @@
+.navLink {
+  margin: 8px auto;
+  border-radius: 16px;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navLink a {
+  text-decoration: none;
+}/*# sourceMappingURL=navLink.css.map */

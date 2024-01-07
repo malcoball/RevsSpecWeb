@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+header .middle .font1 {
+  font-size: 19px;
+  font-weight: 800;
+}
+header .middle .font2 {
+  font-size: 16px;
+  font-weight: 300;
+}/*# sourceMappingURL=headerStyle.css.map */

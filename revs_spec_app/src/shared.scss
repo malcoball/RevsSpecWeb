@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.appContainer{
+  height:100vh;
+}
+.viewWidth1{
+  width:80vw;
+}
+.ico1{
+  aspect-ratio: 1;
+  width:24px;
+}
+
+.color1{color:#fff} // Main text colour
+
+.bColor0{background-color: #2d2f66;} // background background, if that makes any sense
+.bColor1{background-color: #4b4e9d;} // Forground background, if that makes any sense
+.bColor2{background-color: #657bc9;} // Header background
+.bColor3{background-color: #7f82c1;} // Searchbar background
+.bColor4{background-color: #424487;} // NavItem color1
+.bColor5{background-color: #303373;} // NavItem color2
+.bColor6{background-color: #fff;} // Searchbar divider
+
+.borderColor1{border-color:#fff;}
+
+.font1{font-family: 'Merriweather', serif;}
+.font2{font-family: 'Lateef', serif;}

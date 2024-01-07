@@ -1,0 +1,20 @@
+.searchBar {
+  height: 48px;
+  margin: auto;
+  padding: 12px 0px;
+  display: grid;
+  grid-template-columns: 15% 2% auto;
+  border-radius: 16px;
+}
+.searchBar img {
+  margin: auto;
+}
+.searchBar .verticleDivider {
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+.searchBar input {
+  background-color: rgba(250, 250, 250, 0);
+  outline: 0px;
+  border: 0px;
+}/*# sourceMappingURL=searchBarStyle.css.map */

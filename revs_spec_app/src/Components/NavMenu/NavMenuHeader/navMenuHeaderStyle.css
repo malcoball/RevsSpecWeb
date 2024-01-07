@@ -1,0 +1,11 @@
+.navMenuHeader {
+  overflow-x: scroll;
+  height: 64px;
+  display: grid;
+  grid-template-rows: 1px;
+  grid-template-columns: repeat(12, auto);
+}
+
+.navMenuHeader[class~=openMenu] {
+  height: 429px;
+}/*# sourceMappingURL=navMenuHeaderStyle.css.map */
