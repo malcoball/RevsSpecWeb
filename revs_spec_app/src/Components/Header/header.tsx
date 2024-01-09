@@ -10,7 +10,8 @@ const Header = (props:props)=>{
     return (
         <header className="bColor2 color1">
             <div className="left">
-                <img src={Images.other.arrow} className="ico1" />
+                {/* <img src={Images.other.arrow} className="ico1" /> */}
+                <span className="material-symbols-outlined">arrow_back</span>
             </div>
             <div className="middle">
                 <h2 className="font1">{title}</h2>

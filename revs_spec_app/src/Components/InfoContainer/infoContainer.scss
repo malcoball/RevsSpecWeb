@@ -1,0 +1,44 @@
+.infoContainer{
+    display:flex;   justify-content: space-between;
+    text-align: center;
+    margin:auto;
+    .midSpacing{
+        width:2vw;
+    }
+    .infoContainerContent{
+        h5{
+            font-size: 20px;
+            font-weight: 300;
+            padding: 8px 0;
+        }
+        span{
+            font-size: 12px;
+        }
+    }
+    .itemContainer{
+        display:flex;
+        align-items: center; justify-content: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+        height:32px;
+        padding: 0px 4px;
+    }
+    .itemDouble{
+       display:grid;
+       grid-template-columns: 70% auto;
+       align-items: center;
+       span:first-of-type{
+        text-align: left;
+       }
+       span{
+        text-align: right;
+       }
+    }
+    $borderRadius : 16px;
+    .infoContainerDouble{
+        border-top-left-radius: $borderRadius;
+    }
+    .infoContainerSingle{
+        border-top-right-radius: $borderRadius;
+    }
+    
+}

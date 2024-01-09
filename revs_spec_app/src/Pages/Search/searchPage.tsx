@@ -1,4 +1,5 @@
-import NavMenu from "../../Components/NavMenu/navMenu";
+// import NavMenu from "../../Components/NavMenu/navMenu";
+import NavMenu from "../../Components/Nav/NavMenu/navMenu";
 import SearchContainer from "../../Components/Search/SearchContainer/searchContainer";
 import { useMemo } from "react";
 import { specItemCont } from "../../Data/SpecDatabase/DatabaseCompile";

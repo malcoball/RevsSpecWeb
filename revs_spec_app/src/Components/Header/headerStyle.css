@@ -1,9 +1,17 @@
 header {
+  z-index: 2;
+  position: fixed;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  padding-top: 6px;
+  padding-bottom: 3px;
+}
+header .left img {
+  transform: rotate(180deg);
 }
 header .middle .font1 {
   font-size: 19px;

@@ -1,0 +1,14 @@
+.specTitle{
+    display:flex;
+    justify-content: space-between;
+    margin:auto;
+    border-bottom-width: 1px;
+    border-bottom-style:solid;
+    padding:8px 0;
+    text-align: center;
+    .leftArrowCont{
+        transform: rotate(180deg);
+        position:relative;
+        bottom:4px;
+    }
+}

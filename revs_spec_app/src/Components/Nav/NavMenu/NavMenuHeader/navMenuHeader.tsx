@@ -1,6 +1,6 @@
 import { useEffect, useMemo,useState } from 'react';
-import { specItemCont } from '../../../Data/SpecDatabase/DatabaseCompile';
-import { navTitles } from '../../../Data/Nav/navTitles';
+import { specItemCont } from '../../../../Data/SpecDatabase/DatabaseCompile';
+import { navTitles } from '../../../../Data/Nav/navTitles';
 import NavMenuHeaderItem from './NavMenuHeaderItem/navMenuHeaderItem';
 import './navMenuHeaderStyle.css';
 
@@ -32,7 +32,7 @@ const NavMenuHeader = (props:{titlesData:string[]})=>{
         return <NavMenuHeaderItem toggleOpen={toggleMenu} index={index} open={open[index]} imgSrc={item.image} type={item.title} items={getMenuData(item.title)}/>
     })
     return (
-        <div className={"navMenuHeader bColor1 " + className}>
+        <div className={"navMenuHeader bColor1 font1 " + className}>
             {Menu}
         </div>
     )

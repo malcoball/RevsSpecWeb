@@ -1,0 +1,15 @@
+.specScreen .spacing {
+  display: block;
+}
+.specScreen .topSpacing {
+  height: 12px;
+}
+.specScreen .titleSpacing {
+  height: 8px;
+}
+.specScreen .variantSpacing {
+  height: 8px;
+}
+.specScreen .infoSpacing {
+  height: 24px;
+}/*# sourceMappingURL=specScreen.css.map */

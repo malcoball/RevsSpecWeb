@@ -1,4 +1,4 @@
-import NavLink from "../../NavLink/navLink";
+import NavLink from "../../Nav/NavLink/navLink";
 
 const SearchResults = (props:{items:string[]})=>{
     const Items = props.items.map((item,index) => <NavLink oddColor={index%2==0} title={item} link="#"/>);

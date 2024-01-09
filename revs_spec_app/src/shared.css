@@ -4,12 +4,16 @@
   box-sizing: border-box;
 }
 
+.hide {
+  display: none;
+}
+
 .appContainer {
   height: 100vh;
 }
 
 .viewWidth1 {
-  width: 80vw;
+  width: 90vw;
 }
 
 .ico1 {
@@ -19,6 +23,18 @@
 
 .color1 {
   color: #fff;
+}
+
+.color2 {
+  color: #c0c0c0;
+}
+
+.color3 {
+  color: #000000;
+}
+
+.color4 {
+  color: #2f2f2f;
 }
 
 .bColor0 {
@@ -49,6 +65,10 @@
   background-color: #fff;
 }
 
+.bColor7 {
+  background-color: #667bca;
+}
+
 .borderColor1 {
   border-color: #fff;
 }
@@ -59,4 +79,12 @@
 
 .font2 {
   font-family: "Lateef", serif;
+}
+
+.font3 {
+  font-family: "Roboto", sans-serif;
+}
+
+.opacity1 {
+  opacity: 0.2;
 }/*# sourceMappingURL=shared.css.map */

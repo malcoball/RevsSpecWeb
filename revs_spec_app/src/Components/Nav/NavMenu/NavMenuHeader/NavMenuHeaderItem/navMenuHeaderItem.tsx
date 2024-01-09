@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { specType } from "../../../../Data/@types/types"
+import { specType } from "../../../../../Data/@types/types";
 import './navMenuHeaderItem.css';
 import NavLink from "../../../NavLink/navLink";
 type props = {

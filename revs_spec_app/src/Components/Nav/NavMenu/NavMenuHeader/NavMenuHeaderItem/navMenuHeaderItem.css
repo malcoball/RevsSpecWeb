@@ -16,4 +16,7 @@
 .navMenuHeaderItem .navMenuBody {
   position: absolute;
   display: block;
+  overflow-y: scroll;
+  margin-top: 16px;
+  height: 320px;
 }/*# sourceMappingURL=navMenuHeaderItem.css.map */
