@@ -1,16 +1,12 @@
 export type appContextType = {
-    colorScheme :{ 
-        background1 : string,
-        background2 : string,
-        background3 : string,
-        background4 : string,
-        background5 : string,
-        background6 : string,
-        text1 : string,
-        text2 : string,
-        text3 : string,
-        text4 : string,
+    data : {
+        mainTitle : string,
+        date : string,
+        backButton : boolean,
+        specTitle : string,
     }
+    updateTitle : (target : 'main' | 'spec',newValue : string)=>void,
+    changeBack : (value : boolean)=>void
 }
 export type ingredient = {
     name : string,

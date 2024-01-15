@@ -6,6 +6,7 @@
         width:2vw;
     }
     .infoContainerContent{
+        width:42vw;
         h5{
             font-size: 20px;
             font-weight: 300;
@@ -23,9 +24,8 @@
         padding: 0px 4px;
     }
     .itemDouble{
-       display:grid;
+       display:grid; justify-content: space-between;
        grid-template-columns: 70% auto;
-       align-items: center;
        span:first-of-type{
         text-align: left;
        }

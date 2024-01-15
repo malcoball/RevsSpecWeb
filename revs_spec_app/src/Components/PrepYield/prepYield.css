@@ -1,0 +1,19 @@
+.prepYield {
+  border-top-right-radius: 16px;
+  margin: 0px !important;
+  display: block !important;
+  width: 42vw;
+}
+.prepYield h5 {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 8px 0;
+}
+.prepYield input {
+  outline: none;
+  border-radius: 4px;
+  border-width: 0px;
+  width: 64px;
+  text-align: center;
+  font-size: 16px;
+}/*# sourceMappingURL=prepYield.css.map */

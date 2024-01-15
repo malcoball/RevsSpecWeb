@@ -1,19 +1,15 @@
-import React, {createContext} from 'react';
+import React, {createContext, useState} from 'react';
 import { appContextType } from '../@types/types';
 
-const defaultScheme : appContextType = {
-    colorScheme : {
-        background1 : '#657BC9',
-        background2 : '#4B4E9D',
-        background3 : '#363B73',
-        background4 : '#7F82C1',
-        background5 : '#424487',
-        background6 : '#303373',
-        text1       : '#FFF',
-        text2       : '#A4A4A4',
-        text3       : '#000000',
-        text4       : '#2F2F2F',
-    }
+const defaultScheme = {
+    data : {
+        mainTitle : "Revs Kitchen Spec",
+        date : "April 2023",
+        specTitle : "classic burger",
+        backButton : false,
+    },
+    updateTitle : (target : 'main'|'spec',newValue:string)=>{},
+    changeBack : (value : boolean)=>{}
 }
 
 interface Props {
@@ -21,20 +17,24 @@ interface Props {
 }
 export const AppContext = createContext<appContextType >(defaultScheme);
 const AppContextProvider: React.FC<Props> =  ({children}) =>{
-    const colorScheme = {
-        background1 : '#657BC9',
-        background2 : '#4B4E9D',
-        background3 : '#363B73',
-        background4 : '#7F82C1',
-        background5 : '#424487',
-        background6 : '#303373',
-        text1       : '#FFF',
-        text2       : '#A4A4A4',
-        text3       : '#000000',
-        text4       : '#2F2F2F',
-    };
+    const [data,setData] = useState({
+        mainTitle : "Rev's Kitchen Spec",
+        date : "April 2023",
+        specTitle : "classic burger",
+        backButton : false
+    })
+    const updateTitle = (target : 'main' | 'spec',newValue : string)=>{
+        const out = data;
+        target === 'main' ? out.mainTitle = newValue : out.specTitle = newValue;
+        setData(out); 
+    }
+    const changeBack = (value : boolean) => {
+        const out = data;
+        out.backButton = value;
+        setData(out);
+    }
     return (
-        <AppContext.Provider value={{colorScheme}}>
+        <AppContext.Provider value={{data : data,updateTitle : updateTitle,changeBack : changeBack}}>
             {children}
         </AppContext.Provider>
     )

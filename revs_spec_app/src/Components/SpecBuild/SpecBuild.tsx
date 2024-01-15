@@ -7,7 +7,7 @@ type buildProps = {
 }
 const BuildList = (props:buildProps)=>{
     const {title, items} = props;
-    const List = items.map(item=><span className="color4">{item}</span>)
+    const List = items.map((item,index)=><span key={index} className="color4">{item}</span>)
     return (
         <div className="buildList bColor7">
             <h5 className="font3 color3">{title}</h5>
@@ -25,7 +25,7 @@ type props = {
 const SpecBuild = (props:props)=>{
     const {imageSrc, builds} = props;
     const Builds = builds.map((item,index)=>{
-        return <BuildList items={item.items} title={item.title}/>
+        return <BuildList key={index} items={item.items} title={item.title}/>
     })
     return (
         <div className="specBuild">

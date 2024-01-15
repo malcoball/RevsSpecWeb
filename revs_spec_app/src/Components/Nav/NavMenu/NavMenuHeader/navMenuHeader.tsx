@@ -29,7 +29,7 @@ const NavMenuHeader = (props:{titlesData:string[]})=>{
     }
 
     const Menu = navTitles.map((item,index)=>{
-        return <NavMenuHeaderItem toggleOpen={toggleMenu} index={index} open={open[index]} imgSrc={item.image} type={item.title} items={getMenuData(item.title)}/>
+        return <NavMenuHeaderItem toggleOpen={toggleMenu}key={index} index={index} open={open[index]} imgSrc={item.image} type={item.title} items={getMenuData(item.title)}/>
     })
     return (
         <div className={"navMenuHeader bColor1 font1 " + className}>

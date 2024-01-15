@@ -1,20 +1,29 @@
-import './App.css';
-import './shared.css';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createRoot } from "react-dom/client";
+import { useState, useContext } from "react";
 
 import SearchPage from './Pages/Search/searchPage';
-import Header from './Components/Header/header';
 import SpecScreen from './Pages/SpecScreen/specScreen';
+import AppContextProvider, { AppContext } from "./Data/Context/AppContext";
+
+import './App.css';
+import './shared.css';
 
 function App() {
   return (
-    <div className='appContainer bColor0'>
-    <Header title="Kitchen Specs" date='April 2023'/>
-    <main className='bColor0'>
-      {/* <SearchPage/> */}
-      <SpecScreen title="classic burger"/>
-    </main>
-    </div>
+    <BrowserRouter>
+      <AppContextProvider>
+      <div className="appContainer bColor0">
+        <main className="bColor0">
+          <Routes>
+            <Route path="/" element={<SearchPage/>}/>
+            <Route path="/specScreen" element={<SpecScreen/>}/>
+          </Routes>
+        </main>
+      </div>
+      </AppContextProvider>
+    </BrowserRouter>
   );
 }
 

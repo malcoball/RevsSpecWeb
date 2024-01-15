@@ -11,7 +11,7 @@ type props = {
 
 const NavMenuHeaderItem = (props:props)=>{
     const {type,imgSrc,items,index,open,toggleOpen} = props;
-    const itemsList = items.map((item,index)=><NavLink oddColor={index%2==0} title={item} link="#"/>)
+    const itemsList = items.map((item,index)=><NavLink key={index} oddColor={index%2==0} title={item} link="#"/>)
     return (
         <div className="navMenuHeaderItem viewWidth1" onClick={()=>{toggleOpen(index)}}>
             <div className="headerItemText viewWidth1 borderColor1">

@@ -268,6 +268,7 @@ export const specItemCont = {
             multiplyIngredient(ingredient:ingredient|string,multiplyAmount:number):ingredient{
                 // Extract the numbers, multiply them
                 // let str = ingredient.amount;
+                const multiplyAmountParse = isNaN(multiplyAmount) ? 1 : multiplyAmount;
                 let name = typeof(ingredient) === "string" ? "" : ingredient.name;
                 let str = typeof(ingredient) === "string" ? ingredient : ingredient.amount;
                 let multiplies :string[] = []; // Holds all the numbers
@@ -280,7 +281,7 @@ export const specItemCont = {
                     if (isNaN(parseInt(target)) === false){
                         num += target;
                         if (isNaN(parseInt(next)) === true){ // Finished
-                            let numMulti = Math.floor((parseInt(num) * multiplyAmount));
+                            let numMulti = Math.floor((parseInt(num) * multiplyAmountParse));
                             multiplies.push(numMulti + "");
                             num = "";
                         }
