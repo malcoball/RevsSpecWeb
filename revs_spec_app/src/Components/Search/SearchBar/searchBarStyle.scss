@@ -3,8 +3,9 @@
     margin: auto;
     padding: 12px 0px;
     display:grid;
-    grid-template-columns: 15% 2% auto;
+    grid-template-columns: 15% 2% auto 50%;
     border-radius: 16px;
+    align-items: center;
 
     img{
         margin:auto;
@@ -12,6 +13,7 @@
     .verticleDivider{
         border-left-width: 1px;
         border-left-style: solid;
+        height:80%;
     }
     input{
         background-color: #fafafa00;

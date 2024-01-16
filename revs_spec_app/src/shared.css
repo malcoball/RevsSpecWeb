@@ -8,6 +8,10 @@
   display: none;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 .appContainer {
   height: 100vh;
 }

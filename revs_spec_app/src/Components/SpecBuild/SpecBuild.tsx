@@ -1,17 +1,26 @@
+import { useEffect, useRef } from "react";
 import { build } from "../../Data/@types/types";
 import Image from "../DOM/Image";
 import './SpecBuild.css';
 type buildProps = {
     title:string,
-    items:string[]
+    items:string[],
+    className : string
 }
 const BuildList = (props:buildProps)=>{
-    const {title, items} = props;
-    const List = items.map((item,index)=><span key={index} className="color4">{item}</span>)
+    useEffect(()=>{
+        // console.log(listContainerRef.current?.scrollHeight)
+        if (listContainerRef.current !== null){
+            listContainerRef.current.scrollTo(0,0);
+        }
+    },[])
+    const listContainerRef = useRef<HTMLDivElement|null>(null);
+    const {title, items, className} = props;
+    const List = items.map((item,index)=><span key={index} className={"color4 "+className}>{item}</span>)
     return (
-        <div className="buildList bColor7">
-            <h5 className="font3 color3">{title}</h5>
-            <div className="listContainer">
+        <div className={"buildList "+className}>
+            <h5 className={"font3 bColor7 color3 "+className}>{title}</h5>
+            <div ref={listContainerRef} className={"listContainer bColor7 "+className}>
                 {List}
             </div>
         </div>
@@ -25,12 +34,12 @@ type props = {
 const SpecBuild = (props:props)=>{
     const {imageSrc, builds} = props;
     const Builds = builds.map((item,index)=>{
-        return <BuildList key={index} items={item.items} title={item.title}/>
+        return <BuildList className="noSwipe" key={index} items={item.items} title={item.title}/>
     })
     return (
         <div className="specBuild">
             <Image imageSrc={imageSrc} className="specImage viewWidth1"/>
-            <div className="buildListContainer">
+            <div className="buildListContainer noSwipe">
                 {Builds}
             </div>
         </div>
