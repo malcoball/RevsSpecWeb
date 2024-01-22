@@ -19,13 +19,13 @@ export class SpecItem {
     constructor(specInfo:specInput,yieldAmount:string | number,...variantsInp:[variantKey,variant][]){
     // constructor(title:string,ingredients:ingredient[],amount:number,type:specType[] | specType,crockery : string[],image : string,builds: build[],...variantsInp:[variantKey,variant][]){
         const {title,ingredients,crockery,image,builds,type,variant} = specInfo;
-        this.title = StringMethods.case.capitalizeFirstLetter(title),
+        this.title = StringMethods.case.capitalizeFirstLetter(title);
         this.yieldAmount = yieldAmount;
-        this.ingredients = ingredients,
-        this.crockery = crockery,
-        this.image = image,
-        this.builds = builds,
-        this.variants = {...variantDefault},
+        this.ingredients = ingredients;
+        this.crockery = crockery;
+        this.image = image;
+        this.builds = builds;
+        this.variants = {...variantDefault};
         this.type = type;
         this.index = ++index; // Keep track easier, this is a very basic start though. Might even do this manually
         variantsInp.forEach(elm=>{

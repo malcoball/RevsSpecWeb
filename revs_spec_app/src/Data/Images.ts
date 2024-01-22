@@ -7,6 +7,7 @@ import nullIco from '../assets/images/icons/variants/null.png';
 import revs from '../assets/images/icons/icon2.png'
 import hamburger from '../assets/images/icons/nav/menu.png'
 import search from '../assets/images/icons/nav/search.png'
+import hand from '../assets/images/icons/uiHelpers/hand.png'
 
 // Nav
 import navBurger from '../assets/images/icons/nav/burger.png'
@@ -141,7 +142,8 @@ const Images = {
         hamburger:{
             open : hamburger
         },
-        search:search
+        search:search,
+        hand:hand
     },
     allergen : {
         vegan : vegan,

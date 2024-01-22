@@ -2,7 +2,7 @@ import './searchBarStyle.css';
 import Images from '../../../Data/Images';
 type props = {
     text : string,
-    textUpdate : React.Dispatch<React.SetStateAction<string>>
+    textUpdate : (newValue:string)=>void
 }
 
 const SearchBar = (props:props)=>{

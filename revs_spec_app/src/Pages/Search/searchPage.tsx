@@ -7,7 +7,9 @@ import { specItemCont } from "../../Data/SpecDatabase/DatabaseCompile";
 import './searchPageStyle.css';
 
 const SearchPage = ()=>{
-    const titlesData = useMemo(()=>specItemCont.getItem.all.name.string("vegan",'gf','v'),[]) // Controls what the search bar returns
+    const excludes = ['vegan','glutenFree','vegetarian'];
+    const titlesData = useMemo(()=>specItemCont.getItem.all.name.string(...excludes),[]) // Controls what the search bar returns
+    // const titlesData = useMemo(()=>specItemCont.getItem.all.name.string("vegan",'gf','v'),[]) // Controls what the search bar returns
 
     return (
         <>

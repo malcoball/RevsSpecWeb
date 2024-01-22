@@ -4,7 +4,9 @@ export type appContextType = {
         date : string,
         backButton : boolean,
         specTitle : string,
+        searchQuery : string
     }
+    updateSearchQuery : (newValue:string)=>void,
     updateTitle : (target : 'main' | 'spec',newValue : string)=>void,
     changeBack : (value : boolean)=>void
 }

@@ -29,7 +29,7 @@
 .infoContainer .itemDouble {
   display: grid;
   justify-content: space-between;
-  grid-template-columns: 70% auto;
+  grid-template-columns: 65% auto;
 }
 .infoContainer .itemDouble span:first-of-type {
   text-align: left;

@@ -7,8 +7,10 @@ const defaultScheme = {
         date : "April 2023",
         specTitle : "classic burger",
         backButton : false,
+        searchQuery : ""
     },
     updateTitle : (target : 'main'|'spec',newValue:string)=>{},
+    updateSearchQuery : (newValue : string)=>{},
     changeBack : (value : boolean)=>{}
 }
 
@@ -21,12 +23,18 @@ const AppContextProvider: React.FC<Props> =  ({children}) =>{
         mainTitle : "Rev's Kitchen Spec",
         date : "April 2023",
         specTitle : "classic burger",
-        backButton : false
+        backButton : false,
+        searchQuery : ""
     })
     const updateTitle = (target : 'main' | 'spec',newValue : string)=>{
         const out = data;
         target === 'main' ? out.mainTitle = newValue : out.specTitle = newValue;
         setData(out); 
+    }
+    const updateSearchQuery = (newValue : string)=>{
+        const out = data;
+        out.searchQuery = newValue;
+        setData(out);
     }
     const changeBack = (value : boolean) => {
         const out = data;
@@ -34,7 +42,7 @@ const AppContextProvider: React.FC<Props> =  ({children}) =>{
         setData(out);
     }
     return (
-        <AppContext.Provider value={{data : data,updateTitle : updateTitle,changeBack : changeBack}}>
+        <AppContext.Provider value={{data : data,updateTitle : updateTitle,changeBack : changeBack,updateSearchQuery:updateSearchQuery}}>
             {children}
         </AppContext.Provider>
     )

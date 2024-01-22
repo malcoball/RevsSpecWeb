@@ -13,6 +13,7 @@ import Sides from "./Inputs/Sides";
 import Wraps from "./Inputs/Wraps";
 import Prep from "./Inputs/Prep";
 import { StringMethods } from "../StringMethods";
+import { excludeByString, excludeByType } from "./Inputs/Functions/CompileFunctions";
 
 
 let DataBase = [...Brunch,...Burgers,...Desserts,...Grazers,...Kids,...Mains,...Other,...Sandwiches,
@@ -160,7 +161,7 @@ export const specItemCont = {
         byPrevious:(currentItem:specItem,ignoreVariants:boolean):specItem=>{
 
             const num = currentItem.index;
-
+            console.log("number : ",num);
 
             // There's an error component at the end, hence the length - 1
             let next = num === 0 ? DataBase.length - 1 : num - 1 ;
@@ -219,18 +220,9 @@ export const specItemCont = {
         all:{
             name:{
                 string : (...exclude:string[]) : string[] =>{
-                    const out : string[] = [];
-                    DataBase.forEach((elm)=>{
-                        const titleIn = elm.title.toLowerCase();
-                        let match = false;
-                        for (let i = 0; i<exclude.length; i++){
-                            const compare = exclude[i].toLowerCase();
-                            if (titleIn.includes(compare) === true) match = true;
-                        }
-                        if (match === false) out.push(elm.title);
-
-                    });
-                    return out;
+                    excludeByType(DataBase,...exclude);
+                    // return excludeByString(DataBase,...exclude);
+                    return excludeByType(DataBase,...exclude);
                 },
                 objTypes : (exclude:string[] = [])=>{
                     const out = {...typeObj};
