@@ -1,4 +1,5 @@
 import Images from "../../Data/Images"
+import './UiGuides.css';
 
 export const NavMenuScrollHelp = (props:{className : string})=>{
     const {className} = props;

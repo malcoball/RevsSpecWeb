@@ -1,4 +1,5 @@
 .specScreen{
+    position:relative;
     .spacing{
         display:block;
         // border: 1px solid rgb(170, 86, 86);
@@ -14,5 +15,8 @@
     }
     .infoSpacing{
         height:24px;
+    }
+    .handContainer{
+        top:25vh;
     }
 }

@@ -1,3 +1,6 @@
+.specScreen {
+  position: relative;
+}
 .specScreen .spacing {
   display: block;
 }
@@ -12,4 +15,7 @@
 }
 .specScreen .infoSpacing {
   height: 24px;
+}
+.specScreen .handContainer {
+  top: 25vh;
 }/*# sourceMappingURL=specScreen.css.map */

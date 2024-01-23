@@ -9,9 +9,18 @@ import './specScreen.css';
 import { AppContext } from "../../Data/Context/AppContext";
 import Header from "../../Components/Header/header";
 import useSwipeHandler from "../../Components/SwipeHandler/swipeHandle";
+import { NavMenuScrollHelp } from "../../Components/Other/UiGuides";
+import { firstLoad } from "../../Data/LocalData/LocalData";
 
 
 const SpecScreen = ()=>{
+    const pageSwipe = firstLoad("pageSwipe");
+    const [showPageSwipe,setShowPageSwipe] = useState(pageSwipe);
+    useEffect(()=>{
+        setTimeout(()=>{
+            setShowPageSwipe(false);
+        },3000);    
+    })
     const context = useContext(AppContext);
     const [title,setTitle] = useState(context.data.specTitle);
     const data = specItemCont.getItem.byName(title);
@@ -55,6 +64,7 @@ const SpecScreen = ()=>{
             <div className="spacing topSpacing"></div>
             <SpecTitle title={data.title} leftArrowFunc={()=>{changePage(false)}} rightArrowFunc={()=>{changePage(true)}}/>
             <div className="spacing titleSpacing"></div>
+            {showPageSwipe && <NavMenuScrollHelp/>}
             <VariantIconContainer allergens={variants}/>
             <div className="spacing variantSpacing"></div>
             <InfoContainer ingredients={ingredients} crockery={data.crockery} type={data.type} 
