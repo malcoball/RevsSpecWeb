@@ -32,7 +32,7 @@ const NavMenuHeader = (props:{titlesData:string[]})=>{
         return <NavMenuHeaderItem toggleOpen={toggleMenu}key={index} index={index} open={open[index]} imgSrc={item.image} type={item.title} items={getMenuData(item.title)}/>
     })
     return (
-        <div className={"navMenuHeader bColor1 font1 " + className}>
+        <div className={"navMenuHeader  bColor1 font1 " + className}>
             {Menu}
         </div>
     )

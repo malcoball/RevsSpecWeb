@@ -11,7 +11,7 @@ const SearchBar = (props:props)=>{
         textUpdate("");
     }
     return (
-        <div className="searchBar viewWidth1 bColor3">
+        <div className="searchBar viewWidth1 bColor3 maxWidthContainer">
             <img src={Images.other.search} alt="not loaded" className='ico1'/>
             <div className="verticleDivider borderColor1"></div>
             <input className='color1' type="text" placeholder="search" name="" id="" value={text} onChange={(event)=>{textUpdate(event.target.value)}}/>

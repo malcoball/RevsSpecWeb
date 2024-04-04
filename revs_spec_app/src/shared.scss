@@ -22,6 +22,18 @@
   width:24px;
 }
 
+.maxWidthContainerMain{
+  max-width: 824px;
+  margin:auto;
+}
+.maxWidthContainer{
+  max-width: 750px;
+  margin:auto;
+}
+.maxWidthItem{
+  max-width: 315px;
+}
+
 .color1{color:#fff} // Main text colour
 .color2{color:#c0c0c0} // Ingredient text colour
 .color3{color:#000000}

@@ -10,7 +10,7 @@ const VariantIconContainer = (props:props)=>{
         return <VariantIcon key={index} type={item.type} active={item.active} pressFunc={item.pressFunc}/>
     })
     return (
-        <div className="allergenIcons">
+        <div className="allergenIcons maxWidthContainer">
             {Icons}
         </div>
     )

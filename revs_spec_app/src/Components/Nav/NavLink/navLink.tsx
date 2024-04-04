@@ -12,7 +12,7 @@ const NavLink = (props:{title:string,link:string,oddColor:boolean})=>{
         context.changeBack(true);
     }
     return (
-        <div className={"navLink viewWidth1 "+backgroundColor}>
+        <div className={"navLink viewWidth1 maxWidthItem "+backgroundColor}>
             <Link to="/specScreen" onClick={onClick}>
                 <span className="color1">{title}</span>
             </Link>

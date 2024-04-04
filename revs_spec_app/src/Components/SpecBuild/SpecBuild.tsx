@@ -4,6 +4,7 @@ import { build } from "../../Data/@types/types";
 import Image from "../DOM/Image";
 import './SpecBuild.css';
 import { firstLoad } from "../../Data/LocalData/LocalData";
+import ImagePopup from "../Popups/ImagePopup/imagePopup";
 type buildProps = {
     title:string,
     items:string[],
@@ -37,6 +38,8 @@ const SpecBuild = (props:props)=>{
     const myRef = React.useRef<HTMLDivElement>(null);
     const pageSwipe = firstLoad("specBuild");
     const [showPageSwipe,setShowPageSwipe] = useState(pageSwipe);
+    const [showImagePopup,setImagePopup] = useState<boolean>(false);
+    const showImage = ()=>{setImagePopup(true)}; const hideImage = ()=>{setImagePopup(false)};
     const startSwipeDetect = ()=>{
         const yy = myRef.current?.getBoundingClientRect();
         if ((yy !== undefined) && (yy.y+yy.height < window.outerHeight*1.1)){
@@ -53,12 +56,13 @@ const SpecBuild = (props:props)=>{
     
     const {imageSrc, builds} = props;
     const Builds = builds.map((item,index)=>{
-        return <BuildList className="noSwipe" key={index} items={item.items} title={item.title}/>
+        return <BuildList className="noSwipe maxWidthItem" key={index} items={item.items} title={item.title}/>
     })
     return (
-        <div className="specBuild">
-            <Image imageSrc={imageSrc} className="specImage viewWidth1"/>
-            <div ref={myRef} className="buildListContainer noSwipe">
+        <div className="specBuild ">
+            <Image onClick={showImage} imageSrc={imageSrc} className="specImage viewWidth1 maxWidthContainer"/>
+            {showImagePopup && <ImagePopup closeFunc={hideImage} imageSrc={imageSrc}/>}
+            <div ref={myRef} className="buildListContainer noSwipe maxWidthContainerMain">
                 {showPageSwipe && <NavMenuScrollHelp/>}
                 
                 {Builds}

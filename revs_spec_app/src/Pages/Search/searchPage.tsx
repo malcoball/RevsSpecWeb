@@ -14,9 +14,9 @@ const SearchPage = ()=>{
     return (
         <>
         <Header/>
-        <main className="searchPage">
-            <SearchContainer titlesData={titlesData}/>
-            <NavMenu titlesData={titlesData}/>
+        <main className="searchPage maxWidthContainerMain">
+            <SearchContainer className="maxWidthContainerMain" titlesData={titlesData}/>
+            <NavMenu className="maxWidthContainerMain" titlesData={titlesData}/>
         </main>
         </>
 

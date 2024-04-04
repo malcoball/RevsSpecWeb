@@ -25,6 +25,20 @@
   width: 24px;
 }
 
+.maxWidthContainerMain {
+  max-width: 824px;
+  margin: auto;
+}
+
+.maxWidthContainer {
+  max-width: 750px;
+  margin: auto;
+}
+
+.maxWidthItem {
+  max-width: 315px;
+}
+
 .color1 {
   color: #fff;
 }

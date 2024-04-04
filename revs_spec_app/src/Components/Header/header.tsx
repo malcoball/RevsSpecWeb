@@ -11,7 +11,7 @@ const Header = (props:{backButton:boolean})=>{
     const {mainTitle,date} = context.data;
 
     return (
-        <header className="bColor2 color1">
+        <header className="bColor2 color1 maxWidthContainerMain">
             <div className="left">
                 {/* <img src={Images.other.arrow} className="ico1" /> */}
                 {backButton && 

@@ -21,7 +21,7 @@
   text-align: center;
   width: 80vw;
   height: inherit;
-  margin: 0 10vw 0 10vw;
+  margin: 0 48px;
   border-radius: 16px;
 }
 .specBuild .buildListContainer .buildList h5 {

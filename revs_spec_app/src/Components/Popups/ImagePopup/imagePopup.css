@@ -1,0 +1,20 @@
+#imagePopup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#imagePopup div {
+  max-width: 720px;
+  width: 100vw;
+  margin-inline: 4px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.15);
+  aspect-ratio: 1;
+}/*# sourceMappingURL=imagePopup.css.map */

@@ -16,7 +16,7 @@ type props = {
 const InfoContainer = (props:props)=>{
     const {ingredients,crockery,type,prepData} = props;
     return (
-        <div className="infoContainer viewWidth1">
+        <div className="infoContainer viewWidth1 maxWidthContainer">
             <InfoContainerDouble title="Ingredients" items={ingredients}/>
             <div className="midSpacing"></div>
             {type !== "prep" ? 
@@ -48,7 +48,7 @@ const InfoContainerSingle = (props:{title:string,items:string[]})=>{
     const {title,items} = props;
     const List = items.map((elm,index) => {return <ItemSingle key={index} text={elm}/>})
     return (
-        <div className="infoContainerSingle infoContainerContent bColor5 color2 font3">
+        <div className="infoContainerSingle infoContainerContent bColor5 color2 font3 maxWidthItem">
             <h5 className="color1 font3">{title}</h5>
             {List}
         </div>
@@ -59,7 +59,7 @@ const InfoContainerDouble = (props:{title:string,items:ingredient[]})=>{
     const {title,items} = props;
     const List = items.map((elm,index)=>{return <ItemDouble key={index} item={elm}/> })
     return (
-        <div className="infoContainerDouble infoContainerContent bColor5 color2 font3">
+        <div className="infoContainerDouble infoContainerContent bColor5 color2 font3 maxWidthItem">
             <h5 className="color1 font3">{title}</h5>
             {List}
         </div>

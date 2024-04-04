@@ -60,7 +60,7 @@ const SpecScreen = ()=>{
     return (
         <>
         <Header backButton/>
-        <div className="specScreen bColor1" {...handlers}>
+        <div className="specScreen bColor1 maxWidthContainerMain" {...handlers}>
             <div className="spacing topSpacing"></div>
             <SpecTitle title={data.title} leftArrowFunc={()=>{changePage(false)}} rightArrowFunc={()=>{changePage(true)}}/>
             <div className="spacing titleSpacing"></div>

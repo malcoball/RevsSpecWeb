@@ -10,6 +10,8 @@ header{
     text-align: center;
     padding-top:6px;
     padding-bottom:3px;
+    left:50%;
+    margin-left:-412px !important;
     .left{
         img{
             transform: rotate(180deg);
@@ -24,5 +26,11 @@ header{
             font-size:16px;
             font-weight: 300;
         }
+    }
+}
+@media (max-width:824px){
+    header{
+        left:0px;
+        margin:0 !important;
     }
 }
