@@ -57,7 +57,6 @@ export const specItemCont = {
                 for (let i = 0; i < data.length;i++){
                     for (let j = 0; j < data.length; j++){
                         if (data[i].title.charAt(0) > data[j].title.charAt(1)){
-                            console.log("swap : ",data[i]," for : ",data[j])
                             let temp = data[i];
                             data[i] = data[j];
                             data[j] = temp;
